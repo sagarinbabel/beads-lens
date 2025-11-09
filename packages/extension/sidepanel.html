@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Beads Lens</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div id="header">
+    <div id="status-strip">
+      <span id="source"></span> •
+      <span id="sha"></span> •
+      <span id="bdv"></span> •
+      <span id="time"></span>
+    </div>
+    <button id="refresh">Refresh</button>
+  </div>
+
+  <nav id="tabs">
+    <button data-tab="ready" class="active">Ready</button>
+    <button data-tab="blocked">Blocked</button>
+    <button data-tab="deps">Deps</button>
+    <button data-tab="stats">Stats</button>
+  </nav>
+
+  <div id="view"></div>
+
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>
+

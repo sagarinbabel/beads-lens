@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Beads Lens Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h2>Beads Lens Settings</h2>
+
+  <div class="section">
+    <label for="token">GitHub Personal Access Token (for private repos):</label>
+    <input id="token" type="password" placeholder="ghp_..." />
+    <p class="hint">Leave empty for public repos. Requires 'repo' read scope.</p>
+  </div>
+
+  <div class="section">
+    <label for="repos">Tracked Repositories (one per line):</label>
+    <textarea id="repos" rows="6" placeholder="owner/repo&#10;org/another-repo"></textarea>
+  </div>
+
+  <button id="save">Save</button>
+  <div id="status"></div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
+

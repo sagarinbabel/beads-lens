@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Beads Lens Icons</title>
+</head>
+<body>
+  <h1>Beads Lens Icon Generator</h1>
+  <p>Right-click each image below and "Save image as" to save to the icons/ folder:</p>
+  <div id="icons"></div>
+  
+  <script>
+    const sizes = [16, 48, 128];
+    const container = document.getElementById('icons');
+    
+    sizes.forEach(size => {
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      
+      // Blue background
+      ctx.fillStyle = '#0366d6';
+      ctx.fillRect(0, 0, size, size);
+      
+      // White border
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = Math.max(1, size / 32);
+      ctx.strokeRect(size * 0.1, size * 0.1, size * 0.8, size * 0.8);
+      
+      // White 'B' letter
+      ctx.fillStyle = '#ffffff';
+      ctx.font = `bold ${size * 0.6}px Arial`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('B', size / 2, size / 2);
+      
+      const div = document.createElement('div');
+      div.style.margin = '20px';
+      div.innerHTML = `<p>icon${size}.png (${size}x${size})</p>`;
+      div.appendChild(canvas);
+      container.appendChild(div);
+      
+      // Add download link
+      canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `icon${size}.png`;
+        a.textContent = `Download icon${size}.png`;
+        a.style.display = 'block';
+        a.style.marginTop = '10px';
+        div.appendChild(a);
+      });
+    });
+  </script>
+</body>
+</html>
+

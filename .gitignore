@@ -1,0 +1,75 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+beads-host
+beads-exporter
+*.bin
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Extension
+packages/extension/*.zip
+packages/extension/.web-extension-id
+packages/extension/node_modules/
+packages/extension/*.js.map
+packages/extension/lib/*.js.map
+
+# Build artifacts
+dist/
+build/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Chrome extension store
+*.pem
+store-credentials.json
+
+# Screenshots (keep directory, ignore temp files)
+docs/SCREENSHOTS/*.tmp
+
+# Native host manifests (installed versions)
+*.json.bak
+
+# PRD documents (private planning docs)
+prd-source.md
+prd-alpha.md
+prd-beta.md
+roadmap.md
+
+# Beads data directories
+.beads/
+
+# Fixture data for testing
+fixtures/
+
+# UI mockup
+mockup.html
