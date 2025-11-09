@@ -59,9 +59,9 @@ docs/SCREENSHOTS/*.tmp
 # Native host manifests (installed versions)
 *.json.bak
 
-# PRD documents (private planning docs)
+# PRD documents (keep prd-alpha.md for reference, exclude others if sensitive)
+# prd-alpha.md  # Uncomment to exclude
 prd-source.md
-prd-alpha.md
 prd-beta.md
 roadmap.md
 

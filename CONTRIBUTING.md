@@ -6,7 +6,7 @@ Thank you for your interest in contributing to Beads Lens!
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/beads-lens
+   git clone https://github.com/sagarinbabel/beads-lens.git
    cd beads-lens
    ```
 
