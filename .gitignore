@@ -74,3 +74,4 @@ fixtures/
 # UI mockup
 mockup.html
 *.plan.md
+WORKFLOW_EXPLANATION.md
